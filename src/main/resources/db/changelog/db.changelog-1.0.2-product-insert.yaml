@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      - id: 3
+      - author: pj
+      - changes:
+      - loadData:
+        - tableName : product
+        - columns:
+          - column:
+              name: id
+              type: numeric
+          - column:
+              name: name
+              type: string
+          - column:
+              name: unit
+              type: numeric
+          - column:
+              name: amount
+              type: numeric
+          - column:
+              name: calories
+              type: numeric
+        - encoding: UTF-8
+        - file: /db/data/init_products.csv
