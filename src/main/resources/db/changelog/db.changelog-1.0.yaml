@@ -1,0 +1,69 @@
+databaseChangeLog:
+  - changeSet:
+      - id: 1
+      - author: pj
+      - changes:
+        - createTable:
+            tableName: person
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: firstname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lastname
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: pesel
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: age
+                  type: integer
+              - column:
+                  name: height
+                  type: double
+              - column:
+                  name: weight
+                  type: double
+              - column:
+                  name: birthDate
+                  type: timestamp
+              - column:
+                  name: lastUpdateDate
+                  type: timestamp
+        - createTable:
+            tableName: product
+            columns:
+              - column:
+                  name: id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: unit
+                  type: smallint(2)
+              - column:
+                  name: amount
+                  type: double
+              - column:
+                  name: calories
+                  type: double

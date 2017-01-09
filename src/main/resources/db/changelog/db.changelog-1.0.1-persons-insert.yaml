@@ -1,0 +1,31 @@
+databaseChangeLog:
+  - changeSet:
+      - id: 2
+      - author: pj
+      - changes:
+      - loadData:
+        - tableName : person
+        - columns:
+              - column:
+                  name: id
+                  type: numeric
+              - column:
+                  name: firstname
+                  type: string
+              - column:
+                  name: lastname
+                  type: string
+              - column:
+                  name: pesel
+                  type: string
+              - column:
+                  name: age
+                  type: numeric
+              - column:
+                  name: height
+                  type: numeric
+              - column:
+                  name: weight
+                  type: numeric
+        - encoding: UTF-8
+        - file: /db/data/init_persons.csv

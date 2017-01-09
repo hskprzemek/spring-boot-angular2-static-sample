@@ -7,6 +7,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
 /**
@@ -15,6 +16,7 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @SpringBootApplication
 @EnableAutoConfiguration
 @EnableMongoRepositories
+@EnableJpaRepositories
 public class MyApp implements CommandLineRunner{
 
    public static void main(String... args) {
@@ -27,11 +29,11 @@ public class MyApp implements CommandLineRunner{
   @Override
   public void run(String... strings) throws Exception {
     System.out.println("Starting app...");
-    User u = new User();
-    u.setPesel("84111102132");
-    u.setFirstName("Przemek");
-    u.setLastName("Jakubowski");
-    userRepository.save(u);
+//    User u = new User();
+//    u.setPesel("84111102132");
+//    u.setFirstName("Przemek");
+//    u.setLastName("Jakubowski");
+//    userRepository.save(u);
 
     System.out.println(userRepository.findAll());
 
